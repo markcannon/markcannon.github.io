@@ -1,0 +1,155 @@
+body {
+  padding-top: 50px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+main {
+  flex: 1; }
+
+.homepage-details {
+  padding-top: 40px; }
+
+.default-page-main {
+  padding-bottom: 30px; }
+
+/* Link Styling */
+a, a:visited {
+  color: #2e76b0;
+  text-decoration: none; }
+
+a:hover {
+  color: #002048;
+  text-decoration: none; }
+
+.col-fixed-200 {
+  width: 200px;
+  position: fixed; }
+
+.col-offset-200 {
+  padding-left: 215px; }
+
+p {
+  text-align: justify; }
+
+blockquote {
+  font-size: 12px;
+  text-align: justify; }
+  blockquote p {
+    margin-bottom: 0px;
+    padding: 5px 0; }
+
+.navbar ul > li {
+  font-size: 100%; }
+
+.navbar-inverse {
+  background-color: #002048;
+  background-image: none;
+  border: 0; }
+  .navbar-inverse .navbar-brand {
+    color: white; }
+    .navbar-inverse .navbar-brand:hover {
+      color: white; }
+  .navbar-inverse .navbar-nav > li > a {
+    color: #b2bcc8; }
+  .navbar-inverse .navbar-nav > li > a:hover,
+  .navbar-inverse .navbar-nav > li > a:focus {
+    color: white; }
+  .navbar-inverse .navbar-nav > .active > a,
+  .navbar-inverse .navbar-nav > .active > a:hover,
+  .navbar-inverse .navbar-nav > .active > a:focus {
+    background: #002048; }
+  .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: #002048; }
+
+.dropdown-menu > li > a {
+  color: #2e76b0; }
+  .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #2e76b0;
+    color: white;
+    background-image: none; }
+
+.navbar-collapse {
+  max-height: 100% !important;
+  overflow-y: scroll !important; }
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+  background-color: #f0f5fa; }
+
+.table > thead > tr > th {
+  border-bottom: 0px; }
+
+.table-hover thead > tr {
+  background-color: #002048;
+  color: white; }
+
+@media (max-width: 768px) {
+  blockquote p {
+    max-width: 250px;
+    white-space: normal !important;
+    word-break: break-all; } }
+footer {
+  background-color: #002048;
+  color: #b2bcc8;
+  padding-top: 10px;
+  font-size: 12px; }
+  footer a {
+    font-size: 12px; }
+  footer a, footer a:visited {
+    color: #b2bcc8;
+    text-decoration: none; }
+  footer a:hover {
+    color: whitesmoke;
+    text-decoration: none; }
+  footer p {
+    margin: 0 0 10px 0;
+    padding: 0 0;
+    font-size: 100%; }
+  footer .big-icon {
+    font-size: 40px; }
+  footer .icons {
+    padding-top: 10px;
+    background-color: #002048; }
+  footer i {
+    padding: 10px 15px 5px 15px; }
+
+.copyright {
+  font-size: 12px;
+  text-align: right;
+  padding: 5px 0;
+  margin-bottom: 0px;
+  color: #b2bcc8;
+  background-color: #002048; }
+  .copyright a, .copyright a:visited {
+    color: #b2bcc8;
+    text-decoration: none; }
+  .copyright a:hover {
+    color: whitesmoke; }
+
+/* BibTeX items */
+.bibliography li {
+  margin-bottom: 5px;
+  list-style-type: none; }
+
+.bibliography li:before {
+  font-family: 'FontAwesome';
+  content: '\f0c8';
+  margin: 0 3px 0 -20px; }
+
+.bibitem-buttons a {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 12px; }
+
+.doi {
+  display: inline-block; }
+
+.bibtex-code {
+  font-size: 11px; }
+
+.btn-toggle.collapsed .icon-right {
+  display: inline-block; }
+.btn-toggle .icon-right, .btn-toggle.collapsed .icon-down {
+  display: none; }
+.btn-toggle .icon-down {
+  display: inline-block; }
