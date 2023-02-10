@@ -45,7 +45,7 @@ else
 end
 
 % LQ feedback gain and weighting
-[P,lam,K,info] = dare(s.A,s.B,w.Qcost,w.Rcost,'report');
+[P,lam,K,info] = dare(s.A,s.B,w.Qcost,w.Rcost,'report'); %#ok<ASGLU> 
 w.P = P;
 w.W = s.B'*P*s.B + w.Rcost;
 

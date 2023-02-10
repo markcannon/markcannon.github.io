@@ -11,7 +11,7 @@ K = -dlqr(A,B,C'*C,lam);
 
 %% Compute closed loop response with unconstrained optimal controller
 %  No integral action 
-if ~exist('plotflag','var'), plotflag = 1; end;
+if ~exist('plotflag','var'), plotflag = 1; end
 if plotflag
   [y,x] = dstep(A+B*K,Bd*m,C,0);
   x = x'; u = K*x; t = 0:(length(y)-1);

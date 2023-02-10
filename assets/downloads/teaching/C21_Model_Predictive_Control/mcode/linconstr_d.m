@@ -9,9 +9,9 @@ function c = linconstr_d(p,Bd,N)
 %   p -- structure containing Augmented prediction model parameters
 %   N -- number of samples between termination check (default = 5)
 
-if(nargin < 3),
+if(nargin < 3)
   N = 5;
-end;
+end
 
 nz = p.nx + p.nu*p.nc;   % nz = dimension of z
 umax = p.umax;
@@ -23,7 +23,7 @@ flag = 0; k = 0;
 options = optimset('display','off'); zbnd = 1e3*ones(nz,1);
 while ~flag
   for i=1:N
-    A = [A;K_loc(:,p.nx+1:end)];
+    A = [A;K_loc(:,p.nx+1:end)]; %#ok<*AGROW> 
     Bx = [Bx;-K_loc(:,1:p.nx)];  % u[k] = K_loc*z[k]
     bmax = [bmax;umax]; bmin = [bmin;umin];
     K_loc = K_loc*p.Phi; % u[k+1] = K_loc*z[k]
@@ -31,7 +31,7 @@ while ~flag
   j = 1; flag = 1;
   while (flag && j <= 2*p.nu)
     jj = mod(j-1,p.nu)+1; sgn = sign(j-(p.nu+0.5));
-    [z,ujmax] = ...
+    [~,ujmax] = ...
       linprog(sgn*K_loc(jj,:),[[-Bx,A];[Bx,-A]],[bmax;-bmin], ...
 		[],[],-zbnd,zbnd,[],options);
     ujmax = sgn*ujmax;
